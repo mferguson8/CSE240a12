@@ -4,13 +4,13 @@
 generate_random_number(Number) :-
     random(1, 10, Number).
 
-% Predicate to play the guessing game
+% play the guessing game
 guess :-
     write('Try to guess a number between 1 and 10.'), nl,
     generate_random_number(Target),
     play_guessing_game(Target).
 
-% Helper predicate to handle the guessing logic
+% Helper to handle the guessing logic
 play_guessing_game(Target) :-
     write('|: '),
     read(Guess),
